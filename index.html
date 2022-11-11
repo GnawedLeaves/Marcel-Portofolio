@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets\icon\favicon.ico" type="image/x-icon">
+    <title>Marcel Portofolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        ::selection {
+            color: white;
+            background: #FF8876;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            background-color: #FFFAF2;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: default;
+            color: #333333;
+
+            height: 100vw;
+
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        hr {
+            width: 80%;
+            margin: auto;
+            color: #73716d;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+
+        .row {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {}
+
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.6% 0%;
+
+            transition-duration: 0.4s;
+
+            background-color: #FFFAF2;
+        }
+
+        .logo {
+            font-size: 2vw;
+            font-weight: 200;
+
+            transition-duration: 0.3s;
+        }
+
+        .logo:hover {
+            color: #ED7B84;
+        }
+
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9vw;
+
+        }
+
+        .navbtn {
+            padding: 0% 5%;
+        }
+
+        .navbtn:hover {
+            transition-duration: 0.3s;
+            color: #E0BAD7;
+        }
+
+        /*End of header*/
+
+
+        .hero-container {
+            margin-top: 5%;
+            height: 39vw;
+        }
+
+        .name {
+            letter-spacing: 0.3vw;
+            font-size: 2vw;
+            font-weight: 200;
+
+        }
+
+        @keyframes gradient {
+            0% {
+                color: #333333;
+            }
+
+            25% {
+                color: #FF8876;
+            }
+
+            50% {
+                color: #ED7B84;
+
+            }
+
+            75% {
+                color: #E0BAD7;
+
+            }
+
+            100% {
+                color: #333333;
+            }
+
+        }
+
+        .portofolio-row {}
+
+        .portofolio {
+            font-size: 10vw;
+            font-weight: bold;
+            animation: gradient 20s 1s infinite ease-in-out;
+        }
+
+        .subheader-row {
+            margin-top: 4%;
+        }
+
+        .subheader {
+            letter-spacing: 0.2vw;
+            font-size: 0.9vw;
+        }
+
+        .list-container {
+            height: 10vw;
+        }
+
+        .projects-row {
+            margin-bottom: 8%;
+        }
+
+        .projects {
+            font-size: 4vw;
+            font-weight: 200;
+
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .numbering {
+            padding: 0;
+            padding-top: 1%;
+            text-align: right;
+            font-size: 5vw;
+            font-weight: 400;
+            vertical-align: middle;
+        }
+
+        .project-list-row {
+            height: auto;
+        }
+
+        .project-name {
+            text-align: left;
+            font-size: 2.4vw;
+            font-weight: 400;
+        }
+
+        .project-subheader {
+            text-align: left;
+            font-size: 0.9vw;
+        }
+
+        .project-picture {
+            width: 100%;
+            border: #cbcbcb 1px solid;
+        }
+
+        .inplace-link:hover {}
+
+
+        .arrow {
+            transition-duration: 0.5s;
+            text-align: left;
+            padding-top: 3%
+        }
+
+        .arrow:hover {
+            color: #FF8876;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="fixedheader" class="row header text-center">
+        <div class="col-1"></div>
+        <div class="col-3 navbox"><a href="index.html" class="logo">Marcel Yap</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">About</a><a href="#"
+                class="navbtn hover-underline-animation">Contact</a></div>
+
+    </div>
+
+    <div class="row header text-center">
+        <div class="col-1"></div>
+        <div class="col-3 navbox"><a href="#" class="logo">Marcel</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">About</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Projects</a></div>
+
+    </div>
+
+    <!--Hero container-->
+    <div class="container-fluid hero-container">
+        <div class="row name">
+            <div class="col">Marcel's</div>
+        </div>
+
+        <div class="row ">
+            <div class="col-1"></div>
+            <div class="col-10 ">
+                <span class="portofolio">Portfolio</span>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row subheader-row">
+            <div class="col subheader">
+                My Projects & Designs
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row projects-row">
+        <div class="col projects">
+            Projects
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row project-list-row">
+        <div class="col-1"></div>
+        <div class="col-5 "><img src="assets\inplace_search_results.png" alt="#" class="project-picture"></div>
+        <div class="col-1"></div>
+        <div class="col-1 numbering my-auto">
+
+        </div>
+        <div class="col-3 my-auto">
+            <div class="project-name">Inplace Revamp</div>
+            <div class="project-subheader">Group Project for Interface Design Module</div>
+            <div class="project-subheader">Completed: 11 Nov 2022</div>
+            <div class="arrow">
+                <a href="inplace.html" class=""><svg xmlns="http://www.w3.org/2000/svg" width="2.2vw" height="2.2vw"
+                        fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+            </div></a>
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

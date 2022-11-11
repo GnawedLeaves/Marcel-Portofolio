@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets\icon\favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcel Portofolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Inter font-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        ::selection {
+            color: white;
+            background: #FF8876;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.2vw;
+            background-color: #FFFAF2;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: default;
+            color: #333333;
+
+            height: 100vw;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        hr {
+            width: 80%;
+            margin: auto;
+            color: #73716d;
+        }
+
+
+
+        a:hover {
+            color: inherit;
+        }
+
+        .row {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .container {}
+
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.6% 0%;
+
+            transition-duration: 0.4s;
+
+            background-color: #FFFAF2;
+        }
+
+        .logo {
+            color: #333333;
+            font-size: 2vw;
+            font-weight: 200;
+
+            transition-duration: 0.3s;
+        }
+
+        .logo:hover {
+            color: #ED7B84;
+        }
+
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9vw;
+
+        }
+
+        .navbtn {
+            padding: 0% 5%;
+        }
+
+        .navbtn:hover {
+            transition-duration: 0.3s;
+            color: #E0BAD7;
+        }
+
+        /*End of header*/
+
+        /*Animation when scroll start*/
+
+        .space {
+
+            height: 55vw;
+            margin-bottom: 5%;
+        }
+
+
+        @keyframes wipe-enter {
+            0% {
+                transform: scale(0, 0.025);
+            }
+
+            50% {
+                transform: scale(1, 0.025);
+            }
+
+        }
+
+        @keyframes fade-in-animation {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+        }
+
+        .square,
+        .square2 {
+
+            width: 200px;
+            height: 200px;
+            background-color: #ED7B84;
+            border: 1px solid #333333;
+        }
+
+        .square-animation {
+            animation: wipe-enter 1s;
+        }
+
+        .square-animation2 {
+            animation: fade-in-animation 5s backwards;
+        }
+
+        /*Animation when scroll end*/
+
+
+
+
+        @keyframes fade-in {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+
+        }
+
+        @keyframes fade-in-left {
+            from {
+                transform: translateX(-15vw);
+                opacity: 0%;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 100%;
+            }
+
+        }
+
+        @keyframes fade-in-right {
+            from {
+                transform: translateX(15vw);
+                opacity: 0%;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 100%;
+            }
+
+        }
+
+        @keyframes fade-in-bottom {
+            from {
+                transform: translateY(15vw);
+                opacity: 0%;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 100%;
+            }
+
+        }
+
+        @keyframes fade-in-top {
+            from {
+                transform: translateY(-15vw);
+                opacity: 0%;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 100%;
+            }
+
+        }
+
+        .fade-in {
+            animation: fade-in 1s 0.7s backwards;
+        }
+
+        .fade-in-top {
+            animation: fade-in-top 1s;
+        }
+
+        .fade-in-bottom {
+            animation: fade-in-bottom 1s;
+        }
+
+        .fade-in-left {
+            animation: fade-in-left 1s;
+        }
+
+        .fade-in-right {
+            animation: fade-in-right 1s;
+        }
+
+
+
+        .pink {
+            color: #FF8876;
+        }
+
+        .blue {
+            color: #24A9E2;
+        }
+
+        .green {
+            color: #3AA960;
+        }
+
+        .bold {
+            font-weight: 800;
+        }
+
+
+        .title {
+            font-size: 5vw;
+            font-weight: 800;
+        }
+
+        .title2 {
+            padding: 0%;
+            font-size: 4vw;
+            font-weight: 800;
+        }
+
+        .title3 {
+            font-size: 1.4vw;
+            font-weight: 800;
+        }
+
+        .title4 {
+            font-size: 2vw;
+            font-weight: 800;
+        }
+
+        .subheader {
+            margin-top: 4%;
+            padding: 0% 15%;
+            font-size: 1.2vw;
+        }
+
+        .text {
+            font-size: 1.2vw;
+
+            font-weight: 400;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+
+        .hero-container {
+            margin-top: 12%;
+            height: 35vw;
+        }
+
+        .context-container {
+            margin-bottom: 20%;
+        }
+
+
+
+        .context-text {
+            text-align: left;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 4%;
+            width: 100%;
+        }
+
+        #role-text {
+            text-align: left;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3%;
+            font-size: 1vw;
+        }
+
+        .problem-row {
+            margin: 15% 0%;
+        }
+
+        .problem-picture {
+
+            margin: 0;
+            width: 90%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .problem-picture-title {
+            text-align: right;
+            font-size: 2vw;
+            font-weight: 400;
+        }
+
+        #title-right {
+            text-align: left;
+        }
+
+
+        .interview-title {
+            margin-top: 0%;
+        }
+
+        .transition-text-col {
+            font-size: 3vw;
+            font-weight: 800;
+            text-align: left;
+            margin-top: 0%;
+            padding: 10% 15%;
+        }
+
+        .transition-text-row {
+            height: 40vw;
+        }
+
+        .results-row {
+            margin-top: 5%;
+            font-weight: 400;
+            text-align: left;
+            font-size: 1.2vw;
+        }
+
+        .survey-question {
+            margin-bottom: 5%;
+            font-size: 2vw;
+            font-weight: 800;
+
+        }
+
+        .survey-picture {
+            margin-top: 5%;
+        }
+
+        .survey-row {
+            margin: 0;
+            margin-top: 0%;
+        }
+
+        .survey-row2 {
+            margin-top: 5%;
+        }
+
+        .survey-results {
+            font-size: 1.5vw;
+            text-align: left;
+        }
+
+        .my-prototype-picture {
+            margin: 0;
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+        }
+
+        .team-prototypes-row {
+            margin-top: 10%;
+        }
+
+        .picture-row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .picture-col {
+            flex: 25%;
+            max-width: 35%;
+            padding: 0 4px;
+        }
+
+        .picture-col img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .img-hover {
+            transition-duration: 0.5s;
+        }
+
+        .img-hover:hover {
+            transform: scale(1.5);
+            background-color: #FFFAF2;
+        }
+
+        .fixed-background-usertesting {
+            height: 30vw;
+            /*background-position: center;*/
+            background-size: cover;
+            background-image: url("assets/user_interviews_for_final.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .testing-row {
+            margin-bottom: 10%;
+        }
+
+        .final-prototype-row {
+            height: 45vw;
+
+            /*Center things vertically and horizontally in a div*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fixed-background-final-search{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Search_with_filter.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-search1{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Search_with_scrolled.jpg");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-search2{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Search_with_scrolled2.jpg");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-search3{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Search_with_filter_and_tabs.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-profile{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Home.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-profile2{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_Profile.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fixed-background-final-bookmark{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_bookmark1.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-bookmark2{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_bookmark2.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-bookmark3{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_bookmark3.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-bookmark4{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_bookmark4.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-offer{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_offer1.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-offer2{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_offer2.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-offer3{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_offer4.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-design{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/design_system.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fixed-background-final-applied{
+            height: 60vw;
+            background-color: white;
+            background-position:top;
+            background-position-y: 4vw;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-image: url("assets/final_applied.png");
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .return:hover{
+            color:#ED7B84;
+            transition-duration: 0.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Header-->
+    <div id="fixedheader" class="row header text-center">
+        <div class="col-1"></div>
+        <div class="col-3 navbox"><a href="index.html" class="logo">Marcel Yap</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">About</a><a href="#"
+                class="navbtn hover-underline-animation">Contact</a></div>
+
+    </div>
+
+    <div class="row header text-center">
+        <div class="col-1"></div>
+        <div class="col-3 navbox"><a href="#" class="logo">Marcel</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">About</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Projects</a></div>
+
+    </div>
+
+    <!--Title of project-->
+    <div class="container hero-container">
+        <div class="row">
+            <div class="col title2">
+                <div class="">Revamping the Interface</div>
+                <div class="">of InPlace</div>
+
+            </div>
+        </div>
+        <div class="row subheader">
+            <div class="col">
+                A group project to improve NTU's Internship finding platform as part of DV2008 Interface Design Module
+            </div>
+        </div>
+    </div>
+
+    <!--Context-->
+    <div class="container context-container">
+        <div class="row">
+            <div class="col title">Context</div>
+        </div>
+
+        <div class="row subheader context-text">
+            <div class="col ">
+
+                <div class="">Our team consisted of 5 people: <span class="pink">Ryan, Kai, Zi Qi, Xinyi </span>and
+                    <span class="pink">Me</span>
+                </div>
+                <br>
+                <div class="">At the start of the semester, we were tasked to choose an interface and improve it based
+                    on the lessons taught throughout the 13 weeks and present a final high fidelity prototype.</div>
+                <br>
+                <div class="">We chose <span class="blue">InPlace</span>, an internship-finding platform that every NTU
+                    student doing a credit bearing internship had to use. Students had to use this platform to find,
+                    apply and accept internships however, the interface is far from user friendly. </div>
+                <br>
+                <div class="">So we started work right away.</div>
+                <br>
+                <div class="">In this project I was involved in <span class="bold">organising the team</span>, <span
+                        class="bold">conducting user research </span> and <span class="bold">designing prototypes</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--Problem-->
+    <div class="container">
+        <div class="row">
+            <div class="col ">
+                <div class="title">The <span class="">Problem</span></div>
+            </div>
+        </div>
+        <div class="row text-center problem-row">
+            <div class="col-2 title3 problem-picture-title fade-in-left">Home Page</div>
+            <div class="col-1"></div>
+            <div class="col"><img src="assets\old_inplace_home.png" alt="" class="fade-in-right problem-picture"></div>
+        </div>
+
+        <div class="row text-center problem-row">
+            <div class="col"><img src="assets\old_inplace_filter.png" alt="" class="fade-in-right problem-picture">
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 title3 problem-picture-title fade-in-left" id="title-right">Filter Page</div>
+
+
+        </div>
+
+        <div class="row text-center problem-row">
+            <div class="col-2 title3 problem-picture-title fade-in-left">Search Page</div>
+            <div class="col-1"></div>
+            <div class="col"><img src="assets\old_inplace_search.png" alt="" class="fade-in-right problem-picture">
+            </div>
+        </div>
+
+
+        <div class="row text-center problem-row">
+            <div class="col"><img src="assets\old_inplace_profile.png" alt="" class="fade-in-right problem-picture">
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 title3 problem-picture-title fade-in-left" id="title-right">Profile Page</div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <!--User research results-->
+    <div class="container">
+        <div class="row transition-text-row fade-in-js">
+            <div class="col transition-text-col">It was painful to look at, but unfortunately we had to ask <span
+                    class="pink">16 more people</span> to look at it again during user interviews. We also sent out
+                surveys and recieved <span class="pink">43 responses</span>. </div>
+        </div>
+
+
+
+        <div class="row transition-text-row fade-in-js">
+
+            <div class="col transition-text-col">
+                <div class="fade-in-js">Here is some of what we gathered:</div>
+
+            </div>
+        </div>
+
+
+        <!--INTERVIEW FINDINGS-->
+        <div class="row">
+            <div class="title2 interview-title">Interview Findings</div>
+        </div>
+        <div class="row transition-text-row results-row">
+
+            <div class="col-2"></div>
+            <div class="col-3">
+                <div class="title3" style="text-align: left; margin-bottom: 5%;">6 first time users of InPlace</div>
+                <div class="">
+                    <span class="pink">UI is unsightly:</span>
+                    Too wordy - information overload and
+                    repeated information is annoying which
+                    makes the listings look suspicious.
+                </div>
+                <div class="">
+                    <br>
+                    <span class="pink">Filtering system too broad:</span>
+                    People do not know what is the difference between keyword and search filter.
+                </div>
+                <div class="">
+                    <br>
+                    <span class="green">All information required are present:</span> Despite poor organisation of
+                    information, all the important information is there.
+
+                </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3">
+                <div class="title3" style="text-align:left; margin-bottom: 5%;">10 users of InPlace</div>
+                <div class="">
+                    <span class="pink">Information not well organised:</span> Inconsistent information, no company logo,
+                    information is too wordy
+                </div>
+                <div class="">
+                    <br>
+                    <span class="pink">Filtering system does not work:</span>
+                    Clicking on some parts of a filter does not actually apply them
+                </div>
+                <div class="">
+                    <br>
+                    <span class="green">Convenient to submit CV:</span>
+                    Attach and submit,
+                    no redirecting
+
+
+                </div>
+            </div>
+        </div>
+
+        <!--SURVEY FINDINGS-->
+
+
+        <div class="row">
+            <div class="col">
+                <div class="title2 interview-title">Survey Findings</div>
+            </div>
+        </div>
+
+        <div class="row text-center survey-row">
+            <div class="subheader survey-question">Top 3 things users look for when searching for an internship:</div>
+            <div class="col-5"></div>
+            <div class="col-3 survey-results">
+                <div class="">1. Job Scope</div>
+                <div class="">2. Company </div>
+                <div class="">3. Salary</div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col"><img src="assets\survey_results1.png" alt="" class="fade-in-right survey-picture">
+            </div>
+        </div>
+
+        <div class="row text-center survey-row2">
+            <div class="subheader survey-question">Filters users would like to have on an internship searching platform:
+            </div>
+            <div class="col-5"></div>
+            <div class="col-4 survey-results">
+                <div class="">1. Location</div>
+                <div class="">2. Industry of Company </div>
+                <div class="">3. Avaliable Status of Internship</div>
+                <div class="">4. Salary</div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col"><img src="assets\survey_results2.png" alt="" class="fade-in-right survey-picture">
+            </div>
+        </div>
+
+        <!--TRANSITION TO PROTOTPYING-->
+        <div class="row transition-text-row fade-in-js">
+            <div class="col transition-text-col">
+                Once we understood the pain points of the user experience, we laid out the problems we wanted to solve
+                and set some basic design rules.
+            </div>
+        </div>
+        <div class="row transition-text-row fade-in-js">
+            <div class="col transition-text-col">
+                Then everyone in the group seperated to start working on their <span class="pink">own prototype</span>
+                in order to prevent any influence on each other's creativity.
+            </div>
+        </div>
+
+
+        <!--PROTOTYPE-->
+
+        <div class="row">
+            <div class="col title">
+                My Prototype
+            </div>
+        </div>
+
+        <!--MY PROTOTYPE-->
+        <div class="row">
+
+            <div class="col-3">
+                <div class="bold align-left">Filter and search bar fixed on top of screen</div>
+                <div class="text align-left">Instead of Inplace's filter which opens a new page with confusing filters,
+                    this filter is displayed with the top things users want to see.</div>
+                <br><br>
+                <div class="bold align-left">Search results are spilt into boxes</div>
+                <div class="text align-left">After some research into other job searching platforms, I found this system
+                    of displaying search results was the most easy to use and intuitive. </div>
+                <br><br>
+                <div class="bold align-left">Important details displayed in small box </div>
+                <div class="text align-left">Based off the research we conducted, I chose to display internship title,
+                    scope, salary, location and duration, as these were what users wanted to see. </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4"><img src="assets\my_prototype1.png" alt="" class="my-prototype-picture"></div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <br><br>
+                <div class="bold align-left">Full internship details on other half of screen</div>
+                <div class="text align-left">Users are not directed to a new page for details and can quickly click on
+                    another job if they do not like the current job they are looking at, unlike Inplace which opens up a
+                    new page.</div>
+
+                <br><br>
+                <div class="bold align-left">Tab System</div>
+                <div class="text align-left">Users would be able to view a few jobs they're interested in at once and do
+                    a quick comparison.</div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <!--TEAM PROTOTYPES-->
+    <div class="row team-prototypes-row">
+        <div class="col title">
+            Team's Prototypes
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text">
+            Hover over the pictures to take a closer look!
+        </div>
+    </div>
+
+    <div class="row picture-display-row">
+        <div class="col-1"></div>
+        <div class="col">
+            <div class="picture-row">
+                <div class="picture-col">
+                    <div class="img-hover">
+                        <img src="assets\xinyi_prototype.png" alt="" class="">
+                        Xinyi's Prototype
+                    </div>
+                    <div class="img-hover">
+                        <img src="assets\ryan_prototype.png" alt="" class="">
+                        Ryan's Prototype
+                    </div>
+
+
+                </div>
+                <div class="picture-col">
+                    <div class="img-hover">
+                        <img src="assets\kai_prototype1.png" alt="">
+                        Kai's Prototype
+                    </div>
+
+
+                </div>
+                <div class="picture-col">
+                    <div class="img-hover">
+                        <img src="assets\ziqi_prototype.png" alt="" class="">
+                        Ziqi's Prototype
+                    </div>
+
+                    <div class="img-hover">
+                        <img src="assets\kai_prototype2.png" alt="" class="">
+                        Kai's Prototype Comparison Function
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+
+    </div>
+
+    <div class="row  title4" style="margin-top:10%;">
+        <div class="col">
+            Explore our prototypes!
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <iframe alt="Figma Prototype" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsBuniHArRGfQFEHULKloSM%2FMarcel's-Angels-Prototyping"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+
+    <div class="row transition-text-row fade-in-js">
+        <div class="col transition-text-col">
+            <div class=""> We got back together, shared our ideas, mixed and matched different features from each
+                prototype and ended up with <span class="pink">3 low fidelity prototypes</span> to be tested.</div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--USER TESTING-->
+    <div class="row testing-row">
+        <div class="col-3"></div>
+        <div class="col-2 title4 align-left">
+            User Testing
+        </div>
+        <div class="col-4">
+            <div class="text align-left">We pitted the prototypes agasint each other by getting users to explore each
+                prototype while voicing their thought process out loud.</div>
+            <br>
+            <div class="text align-left">Users were then asked various questions on the ease of use and the
+                functionality of each prototype. We recorded the interviews with screen recordings and transcripts.
+            </div>
+            <br>
+            <div class="text align-left">The interview data was analysed and a list of key findings of each prototype
+                was compiled on Figma.</div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <div class="fixed-background-usertesting">
+    </div>
+
+    <!--PROTOTYPE FEEDBACK SUMMARY-->
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col">
+            <div class="bold align-left">
+                Prototype 1 (Marcel & Xinyi)
+            </div>
+            <div class="text align-left ">
+                Liked the tab functionality.
+                <br><br>
+                Liked the company review function.
+                <br><br>
+                Prefers the format where you can see other jobs and quickly compare other jobs.
+                <br><br>
+                Wanted date for reviews and review ratings should stick to the same format (either stars or
+                positive/negative).
+
+
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col">
+            <div class="bold align-left">
+                Prototype 2 (Ryan & Ziqi)
+            </div>
+            <div class="text align-left ">
+                Liked timeline feature on the home page.
+                <br><br>
+                Liked quick upload and document feature.
+                <br><br>
+                Confused between the "shortlisted" and "favourites" tab.
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col">
+            <div class="bold align-left">
+                Prototype 3 (Kai)
+            </div>
+            <div class="text align-left ">
+                Liked the compare function where you can select 3 jobs at once and compare them side by side although
+                some were confused on how to use it at first.
+                <br><br>
+                Liked the location filter but needed to add "central" as a location.
+                <br><br>
+                Did not want the job details to open up to another page.
+            </div>
+        </div>
+        <div class="col-1"></div>
+
+
+    </div>
+
+    <div class="row transition-text-row fade-in-js">
+        <div class="col transition-text-col">
+            <div class=""> The team looked through the feedback, extracting out the features we wanted to keep and the threw out the ones we didn't.
+                <br><br>
+                Then Kai, Ryan and I started working on the final prototype.
+        </div>
+    </div>
+    
+
+    <!--FINAL PROTOTYPE-->
+    <div class="row title final-prototype-row">
+        <div class="col">
+            <span class="blue">Final Prototype</span>
+            
+            <div class="text">Our new and improved InPlace</div>
+        </div>
+    </div>
+
+    <div class="fixed-background-final-profile">
+    </div>
+    <div class="fixed-background-final-profile2">
+    </div>
+    
+
+    <div class="row title2">
+        <div class="col">
+            Home Page and Profile
+        </div>
+    </div>
+
+    <div class="row text align-left" style="margin-bottom: 10%;">
+        <div class="col-1"></div>
+       
+        <div class="col">
+            <div class="bold">Home Page</div>
+            <div class="">
+                Timeline to show the different dates of application openings and gives students a good way to plan their time.
+                <br><br>
+                Notifications and To-dos are clear in the front and easy for user access.
+            </div>
+        </div>
+        <div class="col">
+            <div class="bold">Profile</div>
+            <div class="">Allows users to upload their internship files and will be auto loaded when applying.
+                <br><br>
+                Allows for multiple uploads as well.
+            </div>
+
+        </div>
+
+        
+        <div class="col-1"></div>
+    </div>
+
+
+
+
+
+    <div class="fixed-background-final-search">
+    </div>
+    <div class="fixed-background-final-search1">
+    </div>
+    <div class="fixed-background-final-search2">
+    </div>
+    <div class="fixed-background-final-search3">
+    </div>
+    
+
+    <div class="row title2">
+        <div class="col">
+            Search Results Page
+        </div>
+    </div>
+
+    <div class="row text align-left" style= "margin-bottom: 10%;">
+        <div class="col-1"></div>
+       
+        <div class="col">
+            <div class="bold">Search Results displayed in small boxes</div>
+            <div class="">
+                Cleaned up the box to reduce clutter of information and only displayed what was important to give more readability.
+                <br><br>
+                Company logo was added to give a face to the internship and also giving the space more colour.
+                <br><br>
+                Area tags and applied tags were added and coloured so users would be able to see them quickly .
+                <br><br>
+                Date of internship posting was added so users could make a deicison on if it was relevant to them.
+                <br><br>
+                Bookmark and Comparison functions were added as icons in the box so users could access it easily.
+            </div>
+        </div>
+        <div class="col">
+            <div class="bold">Details Page</div>
+            <div class="">
+                Picture banner was added to give more context to the company and give off a the vibe of the company.
+               <br><br>
+               Responsibilites and Requirements were at the top of the details page and organised in point form for more clarity.
+               <br><br>
+               Extra feature of number of applicants was also added.
+               <br><br>
+               Embeded Map added to show the location of nearby amenities and area.
+               <br><br>
+               Applied button put at the bottom of the page so users can apply once they have made up their mind.
+            </div>
+        </div>
+        <div class="col">
+            <div class="bold">Filter Bar</div>
+            <div class="">Filters based on research on what users wanted to see the most.
+                <br><br>
+                Search bar added to help with quick searches.
+                <br><br>
+                Sorting function so users can easily sort jobs.
+                <br><br><br>
+            </div>
+
+            <div class="bold">Tab System</div>
+            <div class="">
+                Kept due to popularity among users and allows for easy and quick comparing between jobs.
+            </div>
+        </div>
+
+        
+        <div class="col-1"></div>
+    </div>
+
+
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+    <div class="fixed-background-final-bookmark">
+    </div>
+    <div class="fixed-background-final-bookmark2">
+    </div>
+    <div class="fixed-background-final-bookmark3">
+    </div>
+    <div class="fixed-background-final-bookmark4">
+    </div>
+
+    
+
+    <div class="row title2">
+        <div class="col">
+            Bookmark and Comparison Pages
+        </div>
+    </div>
+
+    <div class="row text align-left" style= "margin-bottom: 10%;">
+        <div class="col-1"></div>
+       
+        <div class="col">
+            <div class="bold">Bookmark</div>
+            <div class="">
+                Users can save jobs by clicking the bookmark icon and see them all listed in this section.
+            </div>
+        </div>
+        <div class="col">
+            <div class="bold">Comparing Feature</div>
+            <div class="">
+                Users can press the compare icon and it will turn blue and open a new tab. Users can add up to 3 jobs to compare between them.
+               <br><br>
+               Opens up a new page as this allows them to see the information in a big screen and do their comparison and see which job they want to apply for.
+               <br><br>
+               Apply and More Details buttons are at the bottom of the page so users can apply directly instead of having to return to the previous page.
+
+            </div>
+        </div>
+    
+
+        
+        <div class="col-1"></div>
+    </div>
+
+
+    <div class="fixed-background-final-applied">
+    </div>
+    <div class="row title2">
+        <div class="col">
+            Applied Page
+        </div>
+    </div>
+
+    <div class="row text align-left" style= "margin-bottom: 10%;">
+       
+        <div class="col-3"></div>
+
+        <div class="col-6">
+            <div class="bold">Timeline</div>
+            <div class="">
+               Users would be able to see the progress of their application in the application tab and get updated so they will know if their application was sent and sucessful or not
+            </div>
+        </div>
+        <div class="col-3"></div>
+
+
+        
+        <div class="col-1"></div>
+    </div>
+  
+
+    
+
+
+
+
+
+
+    <div class="fixed-background-final-offer">
+    </div>
+
+    <div class="fixed-background-final-offer3">
+    </div>
+
+    <div class="fixed-background-final-offer2">
+    </div>
+
+
+
+    
+
+    <div class="row title2">
+        <div class="col">
+            Offer Acceptance Flow
+        </div>
+    </div>
+
+
+    <div class="row text align-left" style= "margin-bottom: 10%;">
+        <div class="col-3"></div>
+
+        <div class="col-5">
+            <div class="bold">Accept or Decline</div>
+            <div class="">
+               Kept the interface simple and straightforward as well as a confirmation pop up in case user the user did not mean to accept or decline the offer 
+            </div>
+        </div>
+        <div class="col-3"></div>
+    
+
+        
+
+    </div>
+    <div class="col-3"></div>
+
+    
+
+
+
+    <div class="fixed-background-design">
+    </div>
+
+    <div class="row title2">
+        <div class="col">
+            Design System
+        </div>
+    </div>
+
+
+    <div class="row text align-left" style= "margin-bottom: 10%;">
+        <div class="col-3"></div>
+
+        <div class="col-6">
+            <div class="bold">Made by Kai and used for all the elements of the interface</div>
+            <div class="">
+               I followed this extremely closely while designing the various elements in the final prototype.
+            </div>
+        </div>
+        <div class="col-3"></div>
+    
+
+        
+
+    </div>
+    <div class="col-3"></div>
+
+    
+
+    
+    <div class="row">
+        <div class="col">
+            Explore it here!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FnatfDqQfw18oZ4tdJi5UrU%2FDV2008-Final-Prototype%3Fnode-id%3D0%253A1%26t%3DvJmNRKUSpR8M2ON9-1" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+    <div class="row testing-row" style = "margin-bottom: 10%;">
+        <div class="col-3"></div>
+        <div class="col-2 title4 align-left">
+            My Role
+        </div>
+        <div class="col-4">
+            <div class="text align-left">I worked with Kai and Ryan to come up with the basic layout and format of the page. </div>
+            <br>
+            <div class="text align-left">I designed the bookmark pages and the offer acceptance flow as well as the applied pages.
+            </div>
+            <br>
+            <div class="text align-left">I also had a major role in working on the boxes containing the job listings. </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+
+    <div class="row return">
+        <div class="col">
+            <a href="index.html">Return to Home</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+
+    <script src="js\inplace.js"></script>
+</body>
+
+</html>
